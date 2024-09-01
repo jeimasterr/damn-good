@@ -4,7 +4,7 @@ import time
 import math
 
 
-link = "https://suninjuly.github.io/math.html"
+link = "http://suninjuly.github.io/get_attribute.html"
 
 browser = webdriver.Chrome()
 browser.get(link)
@@ -15,8 +15,9 @@ def calc(x):
 
 
 try:
-    x_element = browser.find_element(By.ID, "input_value") # Поиск значения x
-    x = x_element.text # Присвоение переменной x значения 
+    x_element = browser.find_element(By.ID, "treasure") # Поиск значения x
+    x = x_element.get_attribute("valuex") # Присвоение переменной x значения 
+    assert x is not None, "Нет значения X"
     y = calc(x) # Вызов функции 
 
     input_x = browser.find_element(By.ID, "answer") # Находим поле для ввода значения y
@@ -25,7 +26,7 @@ try:
     checkbox = browser.find_element(By.CSS_SELECTOR, "[type=checkbox]") # Находим чек бокс
     checkbox.click()
 
-    radio_button = browser.find_element(By.CSS_SELECTOR, "[for=robotsRule]") # Находим радио баттон с названием Robots rule
+    radio_button = browser.find_element(By.ID, "robotsRule") # Находим радио баттон с названием Robots rule
     radio_button.click()
 
     submit_button = browser.find_element(By.CSS_SELECTOR, "[type=submit]")    # Находим кнопку подтверждения (Sumbit)
