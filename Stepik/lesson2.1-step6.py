@@ -36,6 +36,6 @@ try:
 
 finally:
 
-    time.sleep(3)
+    time.sleep(7)
     browser.quit()
     print("Done")
