@@ -12,7 +12,7 @@ try:
     input1.send_keys("Ivan")
     input2 = browser.find_element(By.CSS_SELECTOR, "div.first_block > div.form-group.second_class > input") # Поиск 2 поля
     input2.send_keys("Petrov")
-    input3 = browser.find_element(By.CSS_SELECTOR, "div.first_block > div.form-group.third_clss > input") # Поиск 3 поля
+    input3 = browser.find_element(By.CSS_SELECTOR, "div.first_block > div.form-group.third_class > input") # Поиск 3 поля
     input3.send_keys("Smolensk")
 
     # Отправляем заполненную форму
