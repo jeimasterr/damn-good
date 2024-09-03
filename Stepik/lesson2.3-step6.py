@@ -27,7 +27,7 @@ try:
     x = calc(x_element)                                              # Обращаемся к функции calc для подсчета по формуле
 
     input_value = browser.find_element(By.ID, "answer") # Ищем поле для ввода значения
-    input_value.send_keys(x)
+    input_value.send_keys(x) # Вводим данные в поле
 
     Submit = browser.find_element(By.CLASS_NAME, "btn") # Ищем кнопку Submit
     Submit.click()
